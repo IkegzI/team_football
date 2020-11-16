@@ -1,0 +1,25 @@
+<h1>JournalPlayer#new</h1>
+<h1>Новый игрок</h1>
+<div>
+  <%= form_with(url: journal_player_index_path, method: :post) do |f| %>
+    <div>
+      <%= f.label 'Игрок' %>
+      <%= f.select :player_id, @player %>
+    </div>
+    <div>
+      <%= f.label 'Команда' %>
+      <%= f.select :team_id, @team %>
+    </div>
+    <div>
+      <%= f.label 'Игра' %>
+      <%= f.select :game_id, Game.all.map{|team| [team.date, team.id]} %>
+    </div>
+    <div>
+        <p><%= f.collection_check_boxes :player_actions, @action, :last, :first %></p>
+    </div>
+
+    <%= f.submit %>
+
+  <% end %>
+</div>
+

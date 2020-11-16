@@ -1,0 +1,15 @@
+<h4>Проверка на выполнение показателей в последних 5 играх</h4>
+<div>
+  <%= form_with(url: '/example/complete_indicator', method: :post) do |f| %>
+    <div>
+      <%= f.label 'Игрок' %>
+      <%= f.select :player_id, players_select %>
+    </div>
+    <div>
+      <p><%= f.collection_check_boxes :player_actions, actions_select, :last, :first %></p>
+    </div>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+<%= render '/example/query' %>

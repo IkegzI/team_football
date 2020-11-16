@@ -1,0 +1,8 @@
+<h1>Region#new</h1>
+<%= form_with(url: region_index_path, method: :post) do |f| %>
+  <div>
+    <%= f.label 'Название региона/области/штата' %>
+    <%= f.text_field :title %>
+  </div>
+  <%= f.submit %>
+<% end %>

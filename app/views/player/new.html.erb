@@ -1,0 +1,47 @@
+<h1>Новый игрок</h1>
+<div>
+  <%= form_with(url: player_index_path, method: :post) do |f| %>
+    <div>
+      <%= f.label 'Имя' %>
+      <%= f.text_field :firstname %>
+    </div>
+    <div>
+      <%= f.label 'Фамилия' %>
+      <%= f.text_field :lastname %>
+    </div>
+    <div>
+      <%= f.label 'Дата рождения' %>
+      <%= f.date_field :birthday %>
+    </div>
+    <div>
+      <%= f.label 'Любимая позиция' %>
+      <%= f.select :position_id, @position %>
+    </div>
+    <div>
+      <%= f.label 'Страна Проживания' %>
+      <%= f.select :country_id, @country %>
+    </div>
+    <div>
+      <%= f.label 'Обсласть/штат и т.п.' %>
+      <%= f.select :region_id, @region %>
+    </div>
+    <div>
+      <%= f.label 'Текущая команда' %>
+      <%= f.select :team_id, @team %>
+    </div>
+    <div>
+      <%= f.label 'Старт карьеры' %>
+      <%= f.date_field :start_play %>
+    </div>
+    <div>
+      <%= f.label 'Завершил карьеру' %>
+      <%= f.date_field :end_play %>
+    </div>
+    <div>
+      <%= f.label 'Сейчас играет' %>
+      <%= f.check_box :active %>
+    </div>
+    <%= f.submit %>
+
+<% end %>
+</div>

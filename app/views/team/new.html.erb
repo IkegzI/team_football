@@ -1,0 +1,10 @@
+<h1>Team#new</h1>
+<div>
+  <%= form_with(url: team_index_path, method: :post) do |f| %>
+    <p><%= f.text_field :title %></p>
+    <p><%= f.select :country_id, @country %></p>
+    <p><%= f.select :region_id, @region %></p>
+    <p><%= f.label :active %></p>
+    <%= f.submit %>
+  <% end %>
+</div>

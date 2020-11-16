@@ -1,0 +1,43 @@
+<h1>Игрок</h1>
+<div>
+  <div>
+    <%= label_tag 'Имя' %>
+    <%= @player.firstname %>
+  </div>
+  <div>
+    <%= label_tag 'Фамилия' %>
+    <%= @player.lastname %>
+  </div>
+  <div>
+    <%= label_tag 'Дата рождения' %>
+    <%= @player.birthday %>
+  </div>
+  <div>
+    <%= label_tag 'Любимая позиция' %>
+    <%= @player.position.title %>
+  </div>
+  <div>
+    <%= label_tag 'Страна Проживания' %>
+    <%= @player.country.title %>
+  </div>
+  <div>
+    <%= label_tag 'Обсласть/штат и т.п.' %>
+    <%= @player.region.title %>
+  </div>
+  <div>
+    <%= label_tag 'Текущая команда' %>
+    <%= @player.team.title %>
+  </div>
+  <div>
+    <%= label_tag 'Старт карьеры' %>
+    <%= @player.start_play %>
+  </div>
+  <div>
+    <%= label_tag 'Завершил карьеру' %>
+    <%= @player.end_play %>
+  </div>
+  <div>
+    <%= label_tag 'Сейчас играет' %>
+    <%= @player.active %>
+  </div>
+</div>

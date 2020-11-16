@@ -1,0 +1,4 @@
+<% @game.order(:date).each do |game| %>
+  <p><a href="/game/<%= game.id %>"><%= game.owners.first.title %>
+    - <%= game.visitors.first.title %> <%= game.date %> </a></p>
+<% end %>

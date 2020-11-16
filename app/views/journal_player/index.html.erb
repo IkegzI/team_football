@@ -1,0 +1,4 @@
+<h1>JournalPlayer#index</h1>
+<% @journal.each do |journal| %>
+  <p><a href="/player/<%= journal.id %>"><%= journal.player.firstname%> <%=player.lastname%></a></p>
+<% end %>

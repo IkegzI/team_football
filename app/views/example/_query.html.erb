@@ -1,0 +1,15 @@
+<% if @journal %>
+  <% @game.each do |game| %>
+    <% if @journal.where(game_id: game.id).present? %>
+      <p><a href="/game/<%= game.id %>">
+        <%= game.owners.first.title %> - <%= game.visitors.first.title %> (<%= game.date %>)</a>
+      </p>
+      <p>Выполнены следующие нормативы:</p>
+      <% @journal.where(game_id: game.id).each do |item| %>
+        <p>
+          <%= item.type_action.title %>
+        </p>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

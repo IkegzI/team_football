@@ -1,0 +1,8 @@
+<h1>TypeAction#new</h1>
+<%= form_with(url: type_action_index_path, method: :post) do |f| %>
+  <div>
+    <%= f.label 'Действие' %>
+    <%= f.text_field :title %>
+  </div>
+  <%= f.submit %>
+<% end %>

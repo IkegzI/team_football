@@ -1,0 +1,2 @@
+module JournalPlayerHelper
+end

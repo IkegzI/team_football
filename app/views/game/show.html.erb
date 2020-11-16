@@ -1,0 +1,9 @@
+<h1>Game#index</h1>
+<div>
+  <p><%= @game.owners.first.title %> - <%= @game.visitors.first.title %></p>
+  <p><%= @game.amount_owner %> - <%= @game.amount_visitors %></p>
+  <h4>Дата и место проведения проведения</h4>
+  <p><%= @game.date %></p>
+  <p><%= @game.country.title %></p>
+  <p><%= @game.region.title %></p>
+</div>

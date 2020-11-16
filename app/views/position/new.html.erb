@@ -1,0 +1,8 @@
+<h1>Position#new</h1>
+<%= form_with(url: position_index_path, method: :post) do |f| %>
+  <div>
+    <%= f.label 'Позиция' %>
+    <%= f.text_field :title %>
+  </div>
+  <%= f.submit %>
+<% end %>

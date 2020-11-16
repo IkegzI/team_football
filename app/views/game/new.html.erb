@@ -1,0 +1,15 @@
+<h1>Внести данные о новой игре</h1>
+<div>
+  <%= form_with(url: game_index_path, method: :post) do |f| %>
+    <p><%= f.select :owners_id, @teams %></p>
+    <p><%= f.select :visitors_id, @teams %></p>
+    <p><%= f.date_field :date %></p>
+    <p><%= f.text_field :amount_owner %></p>
+    <p><%= f.text_field :amount_visitors %></p>
+    <p><%= f.text_field :result %></p>
+    <p><%= f.select :country_id, @country %></p>
+    <p><%= f.select :region_id, @region %></p>
+    <p><%= f.label :active %></p>
+    <%= f.submit %>
+<% end %>
+</div>

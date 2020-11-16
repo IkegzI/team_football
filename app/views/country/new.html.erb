@@ -1,0 +1,9 @@
+<h1>Country#new</h1>
+<%= form_with(url: country_index_path, method: :post) do |f| %>
+  <div>
+    <%= f.label 'Название страны' %>
+    <%= f.text_field :title %>
+  </div>
+  <%= f.submit %>
+<% end %>
+

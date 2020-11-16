@@ -1,0 +1,4 @@
+<h1>Player#index</h1>
+<% @player.each do |player| %>
+  <p><a href="/player/<%= player.id %>"><%=player.firstname%> <%=player.lastname%></a></p>
+<% end %>
